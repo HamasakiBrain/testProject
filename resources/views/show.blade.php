@@ -39,7 +39,6 @@
                     <td>{{ $product->image }}</td>
                     <td>{{ $product->showMain }}</td>
                     <td>{{ $product->description }}</td>
-                    <td></td>
                 </tr>
             @endforeach
             </tbody>
@@ -49,10 +48,36 @@
         table th {
             padding: 5px !important
         }
+        .table thead th {
+            vertical-align: middle !important
+        }
+        table.dataTable > thead .sorting, table.dataTable > thead .sorting_asc, table.dataTable > thead .sorting_desc, table.dataTable > thead .sorting_asc_disabled, table.dataTable > thead .sorting_desc_disabled {
+            font-size: 12px;
+        }
+        .paginate_button {
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 0 15px rgba(0,0,0,.3);
+            text-decoration: none !important;
+            cursor: pointer;
+        }
+        .paginate_button.current {
+            background-color: royalblue;
+            color: #fff;
+        }
     </style>
 @endsection
 @section('scripts')
     <script>
-        $("#data").DataTable()
+        $("#data").DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/ru.json"
+            }
+        })
+     setTimeout(function(){
+         $("select, input").addClass('form-control')
+     }, 1500)
     </script>
 @endsection

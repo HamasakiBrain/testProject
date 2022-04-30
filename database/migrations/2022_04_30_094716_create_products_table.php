@@ -23,12 +23,12 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->string('priceCP')->nullable();
             $table->string('count')->nullable();
-            $table->string('properties')->nullable();
+            $table->text('properties')->nullable();
             $table->string('joint')->nullable();
             $table->string('unit')->nullable();
             $table->string('image')->nullable();
             $table->string('showMain')->nullable();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

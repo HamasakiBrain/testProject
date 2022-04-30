@@ -18,3 +18,4 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/show', [\App\Http\Controllers\ProductController::class, 'show'])->name('show');
+Route::post('/upload', [\App\Http\Controllers\ProductController::class, 'upload'])->name('upload');
