@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
-Route::get('/show', [\App\Http\Controllers\ProductController::class, 'show']);
+Route::get('/show', [\App\Http\Controllers\ProductController::class, 'show'])->name('show');

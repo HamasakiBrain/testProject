@@ -22,11 +22,12 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Загрузка файла <span class="sr-only">(current)</span></a>
+            <li class="nav-item @if(\Request::is('/')) active @endif">
+                <a href="{{ route('welcome') }}" class="nav-link">Главная</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Посмотреть данные</a>
+       
+            <li class="nav-item @if(\Request::is('show')) active @endif">
+                <a class="nav-link" href="{{ route('show') }}">Посмотреть данные</a>
             </li>
 
         </ul>
