@@ -16,6 +16,8 @@
         "postcss": "^8.1.14"
     },
     "dependencies": {
-        "bootstrap": "4.6"
+        "bootstrap": "4.6",
+        "datatables": "^1.10.18",
+        "jquery": "^3.6.0"
     }
 }
